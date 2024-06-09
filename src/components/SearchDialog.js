@@ -71,7 +71,7 @@ const SearchDialog = () => {
 
 
   return (
-    <Dialog open={mobileMenu} onClose={()=>dispatch(setMobileMenu(false))} >
+    <Dialog className='dialogBox' open={mobileMenu} onClose={()=>dispatch(setMobileMenu(false))} >
 
 <div className='dialog' style={{backgroundColor:darkMode?"black":"white", color:darkMode?"white":"black"}} >
       <h2 style={{textAlign:"center", border:"2px solid white"}}>Search For Another Location</h2>
@@ -80,7 +80,7 @@ const SearchDialog = () => {
         justifyContent:"center"
       }} >
           <form onSubmit={searchHandler} style={{width:"90%"}} > 
-          <input type='text' style={{width:"80%", height:"35px", marginLeft:"8%"}} value={city} onChange={(e)=>setCity(e.target.value)} />
+          <input type='text' style={{width:"80%", height:"35px", margin:"auto"}} value={city} onChange={(e)=>setCity(e.target.value)} />
           <IconButton type="submit" >
           <Search color="info" size="large" />
           </IconButton>
